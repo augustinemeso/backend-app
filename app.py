@@ -11,12 +11,12 @@ from dotenv import load_dotenv
 # Load environment variables from .env file
 load_dotenv()
 
-# Check for required environment variables and log errors if any are missing
-required_env_vars = ['DB_USER', 'DB_PASSWORD', 'DB_HOST', 'DB_PORT', 'DB_NAME', 'SECRET_KEY']
-missing_vars = [var for var in required_env_vars if not os.getenv(var)]
+# # Check for required environment variables and log errors if any are missing
+# required_env_vars = ['DB_USER', 'DB_PASSWORD', 'DB_HOST', 'DB_PORT', 'DB_NAME', 'SECRET_KEY']
+# missing_vars = [var for var in required_env_vars if not os.getenv(var)]
 
-if missing_vars:
-    raise ValueError(f"Missing environment variables: {', '.join(missing_vars)}")
+# if missing_vars:
+#     raise ValueError(f"Missing environment variables: {', '.join(missing_vars)}")
 
 app = Flask(__name__)
 
@@ -152,7 +152,7 @@ def add_todo():
     db.session.commit()
 
     return jsonify({'message': 'Todo added successfully'}), 201
-    
+
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))  # Get port from environment, default to 5000
     app.run(debug=False, host='0.0.0.0', port=port)
