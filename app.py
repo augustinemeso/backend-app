@@ -152,6 +152,9 @@ def add_todo():
     db.session.commit()
 
     return jsonify({'message': 'Todo added successfully'}), 201
-
+    
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Get port from environment, default to 5000
+    app.run(debug=False, host='0.0.0.0', port=port)
+
+    
