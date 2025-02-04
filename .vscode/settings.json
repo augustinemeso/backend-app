@@ -1,0 +1,16 @@
+{
+    "sqltools.connections": [
+        {
+            "pgOptions": {
+                "ssl": {
+                    "rejectUnauthorized": true
+                }
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "driver": "PostgreSQL",
+            "connectString": "postgresql://backend_o6be_user:LxYX3izj8UmbXXDiN6LMDKIP1pbkuJKl@dpg-cugv4f3v2p9s73coff60-a.oregon-postgres.render.com/backend_o6be",
+            "name": "augustine"
+        }
+    ]
+}
