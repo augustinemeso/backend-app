@@ -44,7 +44,7 @@ migrate = Migrate(app, db)
 CORS(app)  # Enable CORS for frontend-backend communication
 
 # Secret key for JWT
-app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+app.config['SECRET_KEY'] = "your-secret-key"
 
 # User model
 class User(db.Model):
