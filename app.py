@@ -35,7 +35,7 @@ print(f"DB_PORT: {db_port}")
 print(f"DB_NAME: {db_name}")
 
 app.config['SQLALCHEMY_DATABASE_URI'] = (
-    f"postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}"
+    f"postgresql://postgres.utllxzyxclyzpbttrpgn:T50agGKffDlt190J@aws-0-ap-south-1.pooler.supabase.com:5432/postgres"
 )
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
